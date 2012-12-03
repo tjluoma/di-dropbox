@@ -77,7 +77,7 @@ MNTPNT=$(echo "Y" | hdid -plist "$FILENAME" 2>/dev/null | fgrep -A 1 '<key>mount
 
 
 	# if the app is already installed, move it to the trash
-[[ -e "/Application/Dropbox.app" ]] && command mv -vf "$APP" "$HOME/.Trash/Dropbox.$INSTALLED_VERSION"
+[[ -e "/Applications/Dropbox.app" ]] && command mv -vf "$APP" "$HOME/.Trash/Dropbox.$INSTALLED_VERSION"
 
 ditto -v "$MNTPNT/Dropbox.app" /Applications && \
 	echo "$NAME: Installed new version of Dropbox"

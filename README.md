@@ -29,4 +29,4 @@ but I don't, so I left it as I use it.
 
 * These builds will almost always be beta. Use with caution, etc.
 
-* If this script breaks anything, it's not my fault. That's the license agreement. Other than that, use, fork, distribute, etc. freely. If your country prohibits these terms, then this script is not available for use in your country.
+* If this script breaks anything, it's not my fault. That's the license agreement. Other than that, use, fork and distribute freely. If your country prohibits such terms, then this script is not available for use in your country.

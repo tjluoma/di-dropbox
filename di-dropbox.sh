@@ -75,14 +75,15 @@ done
 
 MNTPNT=$(echo "Y" | hdid -plist "$FILENAME" 2>/dev/null | fgrep -A 1 '<key>mount-point</key>' | tail -1 | sed 's#</string>.*##g ; s#.*<string>##g')
 
+APP='/Applications/Dropbox.app'
 
 	# if the app is already installed, move it to the trash
-[[ -e "/Applications/Dropbox.app" ]] && command mv -vf "$APP" "$HOME/.Trash/Dropbox.$INSTALLED_VERSION"
+[[ -e "$APP" ]] && command mv -vf "$APP" "$HOME/.Trash/Dropbox.$INSTALLED_VERSION"
 
-ditto -v "$MNTPNT/Dropbox.app" /Applications && \
+ditto -v "$MNTPNT/Dropbox.app" "$APP" && \
 	echo "$NAME: Installed new version of Dropbox"
 
-open -a Dropbox && echo "$NAME: Launched Dropbox"
+open "$APP" && echo "$NAME: Launched Dropbox"
 
 while [ -d "$MNTPNT" ]
 do
